@@ -1,0 +1,6 @@
+{
+  "code": "import { AppConfig } from \"../AppConfig\";\r\nexport default class Log {\r\n    static d(msg, data) {\r\n        if (AppConfig.DEBUG) {\r\n            if (typeof data === 'undefined') {\r\n                console.log(msg);\r\n            }\r\n            else {\r\n                console.log(msg + \"==>\" + data);\r\n            }\r\n        }\r\n    }\r\n    static error(msg, data) {\r\n        if (AppConfig.DEBUG) {\r\n            if (typeof data === 'undefined') {\r\n                console.error(msg);\r\n            }\r\n            else {\r\n                console.error(msg + \"==>\" + data);\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/game/Growup/Laya2Framework/Framework/Framework/src/AppConfig.ts"
+  ]
+}

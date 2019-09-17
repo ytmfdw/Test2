@@ -1,0 +1,4 @@
+{
+  "code": "export default class ImageRunTime extends Laya.Image {\r\n    constructor() {\r\n        super();\r\n        this.scaleTime = 100;\r\n        this.anchorX = this.anchorY = 0.5;\r\n        this.on(Laya.Event.MOUSE_DOWN, this, this.scaleSmal);\r\n        this.on(Laya.Event.MOUSE_UP, this, this.scaleBig);\r\n        this.on(Laya.Event.MOUSE_OUT, this, this.scaleBig);\r\n    }\r\n    scaleBig() {\r\n        Laya.Tween.to(this, { scaleX: 1, scaleY: 1 }, this.scaleTime);\r\n    }\r\n    scaleSmal() {\r\n        Laya.Tween.to(this, { scaleX: 0.8, scaleY: 0.8 }, this.scaleTime);\r\n    }\r\n}\r\n",
+  "references": []
+}

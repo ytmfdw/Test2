@@ -1,0 +1,6 @@
+{
+  "code": "class Main {\r\n    constructor() {\r\n    }\r\n}\r\nnew Main();\r\n",
+  "references": [
+    "E:/game/Growup/Laya2Framework/Framework/Framework/src/GameConfig.ts"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "code": "import { AppConfig } from \"../AppConfig\";\r\nexport default class LevelData {\r\n}\r\nexport function getLevelDataFromQuestionr(index) {\r\n    var data = { grade: 1, level: 1 };\r\n    var grade = Math.ceil(index / AppConfig.GRADE_COUNT);\r\n    var level = (index % AppConfig.GRADE_COUNT === 0) ? AppConfig.GRADE_COUNT : index % AppConfig.GRADE_COUNT;\r\n    data.grade = grade;\r\n    data.level = level;\r\n    return data;\r\n}\r\nexport function getLevelDataByIndex(index) {\r\n    var data = { grade: 1, level: 1 };\r\n    var grade = Math.ceil(index / AppConfig.GRADE_COUNT);\r\n    var level = (index % AppConfig.GRADE_COUNT === 0) ? AppConfig.GRADE_COUNT : index % AppConfig.GRADE_COUNT;\r\n    data.grade = grade;\r\n    data.level = level;\r\n    return data;\r\n}\r\nexport function getGradeName(grade) {\r\n    return grade + ' 级';\r\n}\r\n",
+  "references": [
+    "E:/game/Growup/Laya2Framework/Framework/Framework/src/AppConfig.ts"
+  ]
+}

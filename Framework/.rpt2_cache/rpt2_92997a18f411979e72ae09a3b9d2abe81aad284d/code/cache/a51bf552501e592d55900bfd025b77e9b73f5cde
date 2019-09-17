@@ -1,0 +1,6 @@
+{
+  "code": "import { ui } from \"../ui/layaMaxUI\";\r\nexport default class ProgressView extends ui.widget.ProgressViewUI {\r\n    constructor() {\r\n        super();\r\n        this.maxValue = 100;\r\n        this.minValue = 0;\r\n        this.progress = 0;\r\n    }\r\n    getProgress() {\r\n        return this.progress;\r\n    }\r\n    setProgress(progress, max, min) {\r\n        if (!isNaN(min)) {\r\n            this.minValue = min;\r\n        }\r\n        if (!isNaN(max)) {\r\n            this.maxValue = max;\r\n        }\r\n        this.progress = progress;\r\n        var per = this.progress / (this.maxValue - this.minValue) * this.progressBar.width;\r\n        var moveX = -this.progressBar.width / 2 + per;\r\n        this.progressMask.x = moveX;\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/game/Growup/Laya2Framework/Framework/Framework/src/ui/layaMaxUI.ts"
+  ]
+}

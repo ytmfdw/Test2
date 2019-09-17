@@ -1,0 +1,7 @@
+{
+  "code": "import Log from \"./Log\";\r\nimport { AppConfig } from \"../AppConfig\";\r\nexport function insertCount(data) {\r\n    Log.d(data);\r\n    if (data.mark) {\r\n        if (typeof data.mark == 'object') {\r\n            Log.d(data.mark);\r\n            var tmp = JSON.stringify(data.mark);\r\n            tmp = tmp.replace(/&/g, \"，\");\r\n            tmp = tmp.replace(/\\{/g, \"\");\r\n            tmp = tmp.replace(/\\}/g, \"\");\r\n            tmp = tmp.replace(/\\s+/g, \"\");\r\n            tmp = tmp.replace(/\\./g, \"_\");\r\n            tmp = tmp.replace(/\\:/g, \"：\");\r\n            data.mark = tmp;\r\n        }\r\n        else if (typeof data.mark == 'string') {\r\n            data.mark = data.mark.replace(/\\./g, \"_\");\r\n            data.mark = data.mark.replace(/\\:/g, \"：\");\r\n            data.mark = data.mark.replace(/&/g, \",\");\r\n            data.mark = data.mark.replace(/\\s+/g, \"\");\r\n        }\r\n        else {\r\n            data.mark = String(data.mark);\r\n        }\r\n    }\r\n    else {\r\n        data.mark = '';\r\n    }\r\n    var params = { version: AppConfig.VERSION.replace(/\\./g, '-'), userId: AppConfig.userId, mark: data.mark, channel: AppConfig.userChannel, page: data.page };\r\n    Log.d(data.mark);\r\n    Log.d(params);\r\n    wx.aldSendEvent(data.type, params);\r\n}\r\n",
+  "references": [
+    "E:/game/Growup/Laya2Framework/Framework/Framework/src/utils/Log.ts",
+    "E:/game/Growup/Laya2Framework/Framework/Framework/src/AppConfig.ts"
+  ]
+}

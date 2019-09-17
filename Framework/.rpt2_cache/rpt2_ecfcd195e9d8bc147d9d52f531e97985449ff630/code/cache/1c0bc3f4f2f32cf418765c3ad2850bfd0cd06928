@@ -1,0 +1,6 @@
+{
+  "code": "import { ui } from \"../ui/layaMaxUI\";\r\nexport default class GamePage extends ui.page.GamePageUI {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.level = 0;\r\n    }\r\n    showTip() {\r\n    }\r\n    static getSelf() {\r\n        if (!GamePage.self) {\r\n            GamePage.self = new GamePage();\r\n        }\r\n        return GamePage.self;\r\n    }\r\n    initLevel(level) {\r\n        this.level = level;\r\n    }\r\n}\r\nGamePage.self = null;\r\n",
+  "references": [
+    "E:/game/Growup/Laya2Framework/Framework/Framework/src/ui/layaMaxUI.ts"
+  ]
+}

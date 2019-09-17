@@ -1,0 +1,19 @@
+D .
+D comp
+P 408E425C CupBackground.png
+P D0DB6055 IconHome.png
+P 140F2D2E IconRestart.png
+P 00D61A50 IconReturn.png
+P 007FFE17 img_app.png
+P E2C33FCE img_app_bg.png
+P 4BD35872 img_app_mask.png
+P 40F3C7FA img_icon_share.png
+P 715E40A6 img_level_bg.png
+P 327A3D36 img_yellow_star.png
+P 25717FAB ok_button.png
+R 53ED9D2B RibbonCompleted.png
+P 73DEC64C stage_lock.png
+D logos
+D root
+D sound
+R 00000000 game.js
